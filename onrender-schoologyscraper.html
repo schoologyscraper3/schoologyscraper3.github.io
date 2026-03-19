@@ -294,7 +294,7 @@
       }
       (async function() {
         try {
-          data = (await (await fetch("https://securecentrix81.github.io/schoologyscraper/2025-09-14.json")).json()).students
+          data = (await (await fetch("./2025-09-14.json")).json()).students
           sortData()
           load()
           let lastLoadTime = 0
