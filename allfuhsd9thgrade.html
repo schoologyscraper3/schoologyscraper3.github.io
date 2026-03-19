@@ -131,7 +131,7 @@
     
     <script>addEventListener("error",(e)=>{alert(e.message)})</script>
     <script>
-      let min_data = fetch("https://schoologyscraper.github.io/allfuhsd9thgrade-v1.json").then((e) => {
+      let min_data = fetch("./allfuhsd9thgrade-v1.json").then((e) => {
       	e.json().then((e) => {
           parseMinData(e)
         }).catch((e) => {
