@@ -177,6 +177,10 @@
         transform: scale(1.5);
         transition: 0s;
       }
+      .image-switch-container {
+        display: flex;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
@@ -343,7 +347,7 @@
 <path id="Path_56" data-name="Path 56" d="M660.313,383.588a1.5,1.5,0,0,1,1.06,2.561l-33.556,33.56a2.528,2.528,0,0,0,0,3.564l33.556,33.558a1.5,1.5,0,0,1-2.121,2.121L625.7,425.394a5.527,5.527,0,0,1,0-7.807l33.556-33.559A1.5,1.5,0,0,1,660.313,383.588Z" fill="#000000"/>
       </g>
       </svg>`
-          popupContent.innerHTML = `<div><div><div class="arrowsymbol left" disabled>${leftSVG}</div><div class="popup-image"><img src="${jsonData.image[0].replace("profile_reg","profile_big")}"></div><div class="arrowsymbol right"${jsonData.image.length > 1?"":" disabled"}>${rightSVG}</div></div><p>${jsonData.name}</p><p>${jsonData.school.map(e=>e.trim()).join(", ")}</p><a href="https://fuhsd.schoology.com/user/${jsonData.id}/info">Schoology ID: ${jsonData.id}</a><p class="gray">Courses: ${jsonData.courses}</p><p class="gray">Groups: ${jsonData.groups}</p></div>`
+          popupContent.innerHTML = `<div><div class="image-switch-container"><div class="arrowsymbol left" disabled>${leftSVG}</div><div class="popup-image"><img src="${jsonData.image[0].replace("profile_reg","profile_big")}"></div><div class="arrowsymbol right"${jsonData.image.length > 1?"":" disabled"}>${rightSVG}</div></div><p>${jsonData.name}</p><p>${jsonData.school.map(e=>e.trim()).join(", ")}</p><a href="https://fuhsd.schoology.com/user/${jsonData.id}/info">Schoology ID: ${jsonData.id}</a><p class="gray">Courses: ${jsonData.courses}</p><p class="gray">Groups: ${jsonData.groups}</p></div>`
         }
       })
       popupContent.addEventListener("click", (e) => {
